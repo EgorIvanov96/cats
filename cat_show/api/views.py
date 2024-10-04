@@ -8,14 +8,15 @@ from rest_framework.response import Response
 from users.models import User
 from reviews.models import Porode, Cats
 from .serializers import (
-    UserSerializer, PorodeSerializer,
+    UserCastomSerializer, PorodeSerializer,
     CatsSerializer, CatsListSerializer)
 from .filters import CatsFilter
+from .permission import IsAuthorOrReadOnly
 
 
 class UserViewSet(UserViewSet):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = UserCastomSerializer
 
 
 class PorodeViewSet(viewsets.ReadOnlyModelViewSet):
@@ -25,6 +26,7 @@ class PorodeViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CatsViewSet(viewsets.ModelViewSet):
     queryset = Cats.objects.all()
+    permission_classes = (IsAuthorOrReadOnly,)
     filter_backends = (DjangoFilterBackend,)
     filterset_class = CatsFilter
 

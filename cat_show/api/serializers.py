@@ -4,7 +4,7 @@ from users.models import User
 from reviews.models import Porode, Cats
 
 
-class UserSerializer(serializers.ModelSerializer):
+class UserCastomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
@@ -30,7 +30,7 @@ class CatsListSerializer(serializers.ModelSerializer):
 
 class CatsSerializer(serializers.ModelSerializer):
     """Создания, обновление котят и отображение котенка."""
-    owner = UserSerializer(read_only=True)
+    owner = UserCastomSerializer(read_only=True)
     porode_cats = serializers.PrimaryKeyRelatedField(
         queryset=Porode.objects.all()
         )
