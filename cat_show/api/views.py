@@ -27,8 +27,8 @@ class PorodeViewSet(viewsets.ReadOnlyModelViewSet):
 class CatsViewSet(viewsets.ModelViewSet):
     queryset = Cats.objects.all()
     permission_classes = (IsAuthorOrReadOnly,)
-    filter_backends = (DjangoFilterBackend,)
-    filterset_class = CatsFilter
+    # filter_backends = (DjangoFilterBackend,)
+    # filterset_class = CatsFilter
 
     def get_serializer_class(self):
         if self.action == 'list':
