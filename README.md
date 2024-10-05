@@ -101,8 +101,11 @@ ADMIN:
 
 ```bash
 POST http://localhost:8000/api/users/
-username=newuser
-email=user@example.com
+{
+    "email": "1@gmail.com",
+    "username": "432",
+    "password": "Qw11sasc22"
+}
 ```
 
 #### Получение списка пород
@@ -115,8 +118,11 @@ GET http://localhost:8000/api/porode/
 
 ```bash
 POST http://localhost:8000/api/cats/
-cat_name=Мурзик
-color_cat=Серый&years=6
-porode_cats=1
+{
+    "porode_cats": 4,
+    "cat_name": "Рыжик",
+    "color_cat": "черный",
+    "years": 6
+}
 ```
 
