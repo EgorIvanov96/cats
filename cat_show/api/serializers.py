@@ -49,3 +49,20 @@ class CatsSerializer(serializers.ModelSerializer):
             **validated_data
             )
         return cats
+
+    """def update(self, instance, validated_data):
+        Обновление котенка.
+        porode_cats_data = validated_data.pop('porode_cats', None)
+        if porode_cats_data is not None:
+            porode_cats = Porode.objects.get(id=porode_cats_data.id)
+            instance.porode_cats = porode_cats
+
+        instance.cat_name = validated_data.get('cat_name', instance.cat_name)
+        instance.color_cat = validated_data.get('color_cat', instance.color_cat)
+        instance.years = validated_data.get('years', instance.years)
+        instance.save()
+        return instance
+
+    def delete(self, instance):
+        Удаление котенка.
+        instance.delete()"""
