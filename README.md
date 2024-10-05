@@ -100,7 +100,7 @@ ADMIN:
 #### Регистрация нового пользователя
 
 ```bash
-curl -X POST http://localhost:8000/api/users/ -d 
+curl -X POST http://localhost:8000/api/users/
 'username=newuser
 email=user@example.com'
 ```
@@ -114,7 +114,7 @@ curl -X GET http://localhost:8000/api/porode/
 #### Создание нового котенка
 
 ```bash
-curl -X POST http://localhost:8000/api/cats/ -d 
+curl -X POST http://localhost:8000/api/cats/
 'cat_name=Мурзик
 color_cat=Серый&years=6
 porode_cats=1'
