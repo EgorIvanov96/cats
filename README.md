@@ -15,7 +15,7 @@ API позволяет пользователям:
 
 1. Клонируй репозиторий:
    ```bash
-   git clone https://github.com/yourusername/cats-api.git
+   git clone https://github.com/EgorIvanov96/cats
    cd cats-api
    ```
 
@@ -59,6 +59,20 @@ ADMIN:
    пароль - admin
    ```
 
+
+## Запуск через Docker:
+Чтобы запустить проект на своем локальном компьютере, следуй следующим шагам:
+
+1. Клонируй репозиторий:
+   ```bash
+   git clone https://github.com/EgorIvanov96/cats
+   cd cats-api
+   ```
+
+2. Запустите docker-compose.yml
+   ```bash
+   docker compose up --build
+   ```
 ## Использование
 
 ### Эндпоинты API
