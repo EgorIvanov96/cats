@@ -30,14 +30,33 @@ API позволяет пользователям:
    pip install -r requirements.txt
    ```
 
-4. Примените миграции:
+4. Поменяйте в settings.py DATABASES:
+   ```DATABASES = {
+      'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django',
+        'USER': 'django_user',
+        'PASSWORD': 'mysecretpassword',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+   ```
+
+
+5. Примените миграции:
    ```bash
    python manage.py migrate
    ```
 
-5. Запусти сервер:
+6. Запусти сервер:
    ```bash
    python manage.py runserver
+   ```
+
+ADMIN:
+```
+   email - admin@gmail.com
+   пароль - admin
    ```
 
 ## Использование
