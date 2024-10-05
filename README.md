@@ -95,7 +95,9 @@ ADMIN:
 #### Регистрация нового пользователя
 
 ```bash
-curl -X POST http://localhost:8000/api/users/ -d 'username=newuser&email=user@example.com'
+curl -X POST http://localhost:8000/api/users/ -d 
+'username=newuser
+email=user@example.com'
 ```
 
 #### Получение списка пород
@@ -107,6 +109,9 @@ curl -X GET http://localhost:8000/api/porode/
 #### Создание нового котенка
 
 ```bash
-curl -X POST http://localhost:8000/api/cats/ -d 'cat_name=Мурзик&color_cat=Серый&years=6&porode_cats=1'
+curl -X POST http://localhost:8000/api/cats/ -d 
+'cat_name=Мурзик
+color_cat=Серый&years=6
+porode_cats=1'
 ```
 
