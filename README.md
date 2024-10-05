@@ -73,6 +73,11 @@ ADMIN:
    ```bash
    docker compose up --build
    ```
+
+## Swagger документация:
+```
+   http://127.0.0.1:8000/swagger/
+   ```
 ## Использование
 
 ### Эндпоинты API
